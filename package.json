@@ -1,0 +1,20 @@
+{
+  "name": "NSS-Single-Page-Applications-Sandwich-Maker",
+  "version": "1.0.0",
+  "description": "This was Javascript practice done while attending the [Nashville Software School](http://nashvillesoftwareschool.com/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimAConner/NSS-Single-Page-Applications-Sandwich-Maker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimAConner/NSS-Single-Page-Applications-Sandwich-Maker/issues"
+  },
+  "homepage": "https://github.com/TimAConner/NSS-Single-Page-Applications-Sandwich-Maker#readme"
+}
