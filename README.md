@@ -27,6 +27,12 @@ You should also create an additional JavaScript file that handles interacting wi
 
 Don't worry about exposing the prices to the user until you display the final cost. This is just an exercise, not a business model.
 
+## Setup to Contribute
+1. Clone
+1. git checkout -b myBranchName
+1. Run npm install
+1. Add Gruntfile.js 
+
 ## Boiler Plate Code Examples
 
 ### meat.js
