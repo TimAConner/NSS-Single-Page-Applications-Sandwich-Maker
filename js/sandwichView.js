@@ -30,5 +30,5 @@ module.exports.viewPrice = (pricesArray) => {
     for(let price in pricesArray){
         totalPrice += pricesArray[price];
     }
-    document.getElementById("final-order").innerHTML = totalPrice;
+    document.getElementById("final-order").innerHTML = "$" + totalPrice.toFixed(2);
 };
