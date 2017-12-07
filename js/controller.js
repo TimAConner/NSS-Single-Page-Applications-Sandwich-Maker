@@ -3,7 +3,7 @@
 const sandwich = require("./sandwich");
 const view = require("./sandwichView");
 
-let price = 0.00;
+
 
 module.exports.createPage = () => {
     view.createDropDown(sandwich.getParts());
@@ -16,8 +16,12 @@ const activateSelect = () => {
     selects.forEach((element) => {
         element.addEventListener("change", () => {
             let ingredient = element.options[element.selectedIndex].id;
-            price += +sandwich.getParts()[element.id].add(ingredient);
-            view.viewPrice(price);
+            if(ingredient === "None"){
+                sandwich.prices[element.id] = 0.00;
+            } else {
+                sandwich.prices[element.id] += +sandwich.getParts()[element.id].add(ingredient);
+            }
+            view.viewPrice(sandwich.prices);
         });
     });
 };

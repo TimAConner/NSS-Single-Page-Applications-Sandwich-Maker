@@ -25,7 +25,10 @@ module.exports.createDropDown = (ingredientsArray) => {
     }
 };
 
-module.exports.viewPrice = (price) => {
-    console.log("hello");
-    document.getElementById("final-order").innerHTML = price.toFixed(2);
+module.exports.viewPrice = (pricesArray) => {
+    let totalPrice = 0.00;
+    for(let price in pricesArray){
+        totalPrice += pricesArray[price];
+    }
+    document.getElementById("final-order").innerHTML = totalPrice;
 };
