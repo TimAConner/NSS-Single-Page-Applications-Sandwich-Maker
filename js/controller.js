@@ -20,9 +20,7 @@ const activateSelect = () => {
 
             let addFunction = `add${ingredientCategory.charAt(0).toUpperCase() + ingredientCategory.slice(1)}`;
 
-            console.log(addFunction);
-            console.log(sandwich.getParts()[element.id]);
-            let price = +sandwich.getParts()[element.id][addFunction](ingredient);
+            let price = +sandwich.getParts()[ingredientCategory][addFunction](ingredient);
             
             sandwich.setPrice(price, ingredientCategory);
             view.viewPrice(sandwich.getTotalPrice());
