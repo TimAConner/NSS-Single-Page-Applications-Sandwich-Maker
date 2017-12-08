@@ -10,6 +10,6 @@ module.exports.getTypes = () => {
     return types;
 };
 
-module.exports.add = (veggie) => {
+module.exports.addVeggies = (veggie) => {
     return types[veggie];
 };

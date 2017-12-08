@@ -17,7 +17,12 @@ const activateSelect = () => {
         element.addEventListener("change", () => {
             let ingredient = element.options[element.selectedIndex].id;
             let ingredientCategory = element.id;
-            let price = +sandwich.getParts()[element.id].add(ingredient);
+
+            let addFunction = `add${ingredientCategory.charAt(0).toUpperCase() + ingredientCategory.slice(1)}`;
+
+            console.log(addFunction);
+            console.log(sandwich.getParts()[element.id]);
+            let price = +sandwich.getParts()[element.id][addFunction](ingredient);
             
             sandwich.setPrice(price, ingredientCategory);
             view.viewPrice(sandwich.getTotalPrice());
