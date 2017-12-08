@@ -19,3 +19,15 @@ module.exports.prices = {
     "condiments":  0.00,
     "bread":  0.00,
 };
+
+module.exports.setPrice = (value, category) => {
+    this.prices[category] = value;
+};
+
+module.exports.getTotalPrice = () => {
+    let totalPrice = 0.00;
+    for(let price in this.prices){
+        totalPrice += this.prices[price];
+    }
+    return totalPrice;
+};

@@ -13,9 +13,10 @@ module.exports.createDropDown = (ingredientsArray) => {
 
         let selectDOM = document.createElement("select");
         selectDOM.id = prop;
+
         for(let ingredient in ingredients){
             let option = document.createElement("option");
-            option.innerText = ingredient;
+            option.innerText = `${ingredient} $${ingredients[ingredient]}`;
             option.id = ingredient;
             selectDOM.appendChild(option);
         }
@@ -25,10 +26,6 @@ module.exports.createDropDown = (ingredientsArray) => {
     }
 };
 
-module.exports.viewPrice = (pricesArray) => {
-    let totalPrice = 0.00;
-    for(let price in pricesArray){
-        totalPrice += pricesArray[price];
-    }
+module.exports.viewPrice = (totalPrice) => {
     document.getElementById("final-order").innerHTML = "$" + totalPrice.toFixed(2);
 };
